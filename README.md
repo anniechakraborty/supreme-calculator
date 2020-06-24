@@ -2,6 +2,9 @@
 
 This is going to be my personal calculator flutter app and will also have an option of convertion.
 
+## App screenshot
+![Image](app.png)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
