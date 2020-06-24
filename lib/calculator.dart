@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mycalculator/number_buttons.dart';
 
-import 'bottomWaveClipper.dart';
 import 'constants.dart';
 
 class Calculator extends StatefulWidget {
@@ -29,41 +28,38 @@ class _CalculatorState extends State<Calculator> {
           children: <Widget>[
             Expanded(
               flex: 1,
-              child: ClipPath(
-                clipper: BottomWaveClipper(),
-                child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Container(
-                        child: Text(
-                          expression,
-                          style: TextStyle(
-                            fontSize: 28.0,
-                            color: Colors.white70,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 2.0,
-                          ),
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      child: Text(
+                        expression,
+                        style: TextStyle(
+                          fontSize: 28.0,
+                          color: Colors.white70,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 2.0,
                         ),
                       ),
-                      SizedBox(
-                        height: 25.0,
-                      ),
-                      Container(
-                        child: Text(
-                          output,
-                          style: TextStyle(
-                            fontSize: 40.0,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 2.0,
-                          ),
+                    ),
+                    SizedBox(
+                      height: 25.0,
+                    ),
+                    Container(
+                      child: Text(
+                        output,
+                        style: TextStyle(
+                          fontSize: 40.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 2.0,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ),
